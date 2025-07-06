@@ -7,11 +7,20 @@ public class Student {
     private String vorName;
     private String nachName;
     private int id;
+    private List<Kurs> kurses = new ArrayList<>();
 
     public Student(String nvorNme, String nachName, int id) {
         this.vorName = nvorNme;
         this.nachName = nachName;
         this.id = id;
+    }
+
+    public void setKurses(Kurs kurs) {
+        this.kurses.add(kurs);
+    }
+
+    public List<Kurs> getKurses() {
+        return kurses;
     }
 
     public int getId() {
