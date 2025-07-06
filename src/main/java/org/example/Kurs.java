@@ -17,4 +17,28 @@ public class Kurs {
                 dozent + '\t' +
                 raum;
     }
+
+    public String getKursName() {
+        return kursName;
+    }
+
+    public void setKursName(String kursName) {
+        this.kursName = kursName;
+    }
+
+    public String getDozent() {
+        return dozent;
+    }
+
+    public void setDozent(String dozent) {
+        this.dozent = dozent;
+    }
+
+    public int getRaum() {
+        return raum;
+    }
+
+    public void setRaum(int raum) {
+        this.raum = raum;
+    }
 }

@@ -43,4 +43,28 @@ public class Student {
             System.out.println(student);
         }
     }
+
+    public String getVorName() {
+        return vorName;
+    }
+
+    public void setVorName(String vorName) {
+        this.vorName = vorName;
+    }
+
+    public String getNachName() {
+        return nachName;
+    }
+
+    public void setNachName(String nachName) {
+        this.nachName = nachName;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setKurses(List<Kurs> kurses) {
+        this.kurses = kurses;
+    }
 }
