@@ -1,9 +1,9 @@
 package org.example.sacks;
 
-public class Sack implements SackList {
-    private Object[] arraysObjects;
+public class Sack<T> implements SackList<T> {
+    private T[] arraysObjects;
 
-    public Sack(Object[] arraysObjects) {
+    public Sack(T[] arraysObjects) {
         this.arraysObjects = arraysObjects;
     }
 
@@ -12,22 +12,22 @@ public class Sack implements SackList {
             System.out.println("No objects in this Sack");
             return;
         }
-        for (Object arraysObject : arraysObjects) {
+        for (T arraysObject : arraysObjects) {
             System.out.println(arraysObject);
         }
     }
 
     @Override
-    public void add(Object object) {
+    public void add(T object) {
         int newSize = this.size() + 1;
-        Object[] tempArraysString = arraysObjects;
-        this.arraysObjects = new Object[newSize];
+        T[] tempArraysString = arraysObjects;
+        this.arraysObjects = (T[]) new Object[newSize];
         System.arraycopy(tempArraysString, 0, this.arraysObjects, 0, tempArraysString.length);
         this.arraysObjects[newSize - 1] = object;
     }
 
     @Override
-    public Object get(int index) {
+    public T get(int index) {
         if (index < 0 || index >= this.size() - 1) {
             System.out.println("Index out of bounds");
             return null;
@@ -45,15 +45,15 @@ public class Sack implements SackList {
     }
 
     @Override
-    public Object removeLast() {
+    public T removeLast() {
         if (size() < 1) {
             arraysObjects = null;
             return null;
         }
 
         int newSize = this.size() - 1;
-        Object[] tempArraysObjects = arraysObjects;
-        this.arraysObjects = new Object[newSize];
+        T[] tempArraysObjects = arraysObjects;
+        this.arraysObjects = (T[]) new Object[newSize];
 
         if (tempArraysObjects.length - 1 >= 0)
             System.arraycopy(tempArraysObjects, 0, this.arraysObjects, 0, tempArraysObjects.length - 1);
@@ -61,15 +61,15 @@ public class Sack implements SackList {
     }
 
     @Override
-    public Object removeByIndex(int index) {
+    public T removeByIndex(int index) {
         if ((index >= this.size()) || (index < 0)) {
             System.out.println("Index out of range");
             return null;
         }
 
         int newSize = this.size() - 1;
-        Object[] tempArraysString = arraysObjects;
-        this.arraysObjects = new Object[newSize];
+        T[] tempArraysString = arraysObjects;
+        this.arraysObjects = (T[]) new Object[newSize];
         int currentIndex = 0;
         for (int i = 0; i < tempArraysString.length; i++) {
             if (i != index) {

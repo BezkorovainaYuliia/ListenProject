@@ -1,13 +1,13 @@
 package org.example.sacks;
 
-public interface SackList {
-    void add(Object object);
+public interface SackList<T> {
+    void add(T object);
 
-    Object get(int index);
+    T get(int index);
 
     int size();
 
-    Object removeLast();
+    T removeLast();
 
-    Object removeByIndex(int index);
+    T removeByIndex(int index);
 }

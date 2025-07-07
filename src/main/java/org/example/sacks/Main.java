@@ -11,7 +11,7 @@ public class Main {
         arrays[3] = 4;
         arrays[4] = 5;
         arrays[5] = 6;
-        Sack sack = new Sack(arrays);
+        Sack<Integer> sack = new Sack<>(arrays);
         sack.print();
         System.out.println("Element " + sack.get(0));
         System.out.println("-------------");
@@ -35,7 +35,7 @@ public class Main {
         arraysS[3] = "ein";
         arraysS[4] = "Teilnehmer";
         arraysS[5] = "des Kurses";
-        Sack sack2 = new Sack(arraysS);
+        Sack<String> sack2 = new Sack(arraysS);
         sack2.print();
         System.out.println("Element N2 ist " + sack2.get(2));
         System.out.println("-------------");
