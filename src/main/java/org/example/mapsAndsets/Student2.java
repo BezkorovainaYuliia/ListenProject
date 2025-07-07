@@ -6,16 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Student2 implements Comparable<Student2> {
-    @Override
-    public int compareTo(Student2 o) {
-
-        int lastNameComparison = this.nachName.compareToIgnoreCase(o.nachName);
-        if (lastNameComparison != 0) {
-            return lastNameComparison;
-        }
-        return this.vorName.compareToIgnoreCase(o.vorName);
-    }
+public class Student2{
 
     private String vorName;
     private String nachName;
@@ -37,38 +28,6 @@ public class Student2 implements Comparable<Student2> {
     @Override
     public String toString() {
         return vorName + "\t" + nachName;
-    }
-
-    public static void main(String[] args) {
-        List<Student2> student2s = new ArrayList<>();
-        student2s.add(new Student2("Yuliia", "Bezkorovaina"));
-        student2s.add(new Student2("Daniel", "Protsak"));
-        student2s.add(new Student2("Tom", "Müller"));
-        student2s.add(new Student2("Hanna", "Schmitt"));
-        student2s.add(new Student2("Quan-Sek", "Han"));
-        for (Student2 student2 : student2s) {
-            System.out.println(student2);
-        }
-    }
-
-    public String getVorName() {
-        return vorName;
-    }
-
-    public void setVorName(String vorName) {
-        this.vorName = vorName;
-    }
-
-    public String getNachName() {
-        return nachName;
-    }
-
-    public void setNachName(String nachName) {
-        this.nachName = nachName;
-    }
-
-    public void setKurses(List<Kurs> kurses) {
-        this.kurses = kurses;
     }
 
     @Override

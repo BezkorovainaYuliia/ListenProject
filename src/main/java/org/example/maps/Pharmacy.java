@@ -28,9 +28,6 @@ public class Pharmacy {
     public void printAllMedications() {
         medications.forEach((name, medication) -> System.out.println(name+"\t"+medication));
     }
-    public Map<String, Medication> getMedications() {
-        return medications;
-    }
 
     public int getCount(String medicationName) {
         Medication medication = medications.get(medicationName);
@@ -47,14 +44,6 @@ public class Pharmacy {
 
     public void delete(String medicationName){
         medications.remove(medicationName);
-    }
-
-    public void setMedications(Map<String, Medication> medications){
-        this.medications = medications;
-    }
-
-    public void setMedication(String medicationName, Medication medication){
-        medications.put(medicationName, medication);
     }
 
     public void setMedication(){
