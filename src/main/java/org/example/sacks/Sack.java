@@ -8,6 +8,10 @@ public class Sack implements SackList {
     }
 
     public void print() {
+        if (arraysObjects.length == 0) {
+            System.out.println("No objects in this Sack");
+            return;
+        }
         for (Object arraysObject : arraysObjects) {
             System.out.println(arraysObject);
         }
@@ -33,6 +37,10 @@ public class Sack implements SackList {
 
     @Override
     public int size() {
+        if (arraysObjects == null) {
+            System.out.println("Arrays object is null");
+            return 0;
+        }
         return this.arraysObjects.length;
     }
 

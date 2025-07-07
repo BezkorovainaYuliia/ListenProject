@@ -21,8 +21,13 @@ public class Main {
         sack.print();
         System.out.println("Element delete " + sack.removeByIndex(3));
         sack.print();
+        System.out.println("<--------------->");
+        while (sack.size() != 0) {
+            sack.removeLast();
+        }
+        sack.print();
 
-
+        System.out.println("<--------------->");
         String[] arraysS = new String[6];
         arraysS[0] = "Hello";
         arraysS[1] = "Du";
@@ -32,7 +37,7 @@ public class Main {
         arraysS[5] = "des Kurses";
         Sack sack2 = new Sack(arraysS);
         sack2.print();
-        System.out.println("Element " + sack2.get(2));
+        System.out.println("Element N2 ist " + sack2.get(2));
         System.out.println("-------------");
         sack2.print();
         System.out.println("-------------");
